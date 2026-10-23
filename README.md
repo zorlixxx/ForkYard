@@ -1,11 +1,25 @@
-# ForkYard
+ <p align="center">
+  <img src="assets/forkyard%20icon/forkyard-icon.svg" alt="ForkYard Logo" width="150">
+</p>
 
-Windows Optimization Toolkit — v1.0.0
+<h1 align="center">ForkYard</h1>
 
-[![License: MIT (no commercial use)](https://img.shields.io/badge/license-MIT%20NC-blue.svg)](LICENSE)
-[![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/)
-[![PySide6](https://img.shields.io/badge/PySide6-6.12-blue.svg)](https://www.pyside.org/)
-[![Windows 10/11](https://img.shields.io/badge/Windows-10%20%7C%2011-blue.svg)](https://www.microsoft.com/windows)
+<p align="center">
+  <strong>Windows Optimization Toolkit — v1.0.0</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/zorlixxx/ForkYard/releases">
+    <img src="https://img.shields.io/badge/Download-Latest%20Release-7c3aed?style=for-the-badge" alt="Download latest release">
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT%20NC-blue.svg" alt="License: MIT (no commercial use)">
+  <img src="https://img.shields.io/badge/python-3.13-blue.svg" alt="Python 3.13">
+  <img src="https://img.shields.io/badge/PySide6-6.12-blue.svg" alt="PySide6">
+  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-blue.svg" alt="Windows 10/11">
+</p>
 
 ForkYard es una aplicación de optimización para Windows 10 y 11. Combina una interfaz moderna construida con **PySide6 y QML** con un catálogo de más de 200 optimizaciones: ajustes de registro, gestión de servicios, energía, GPU, drivers, limpieza, navegadores, redes y más.
 
@@ -48,18 +62,22 @@ ForkYard es una aplicación de optimización para Windows 10 y 11. Combina una i
 ## 🛠️ Construir desde código fuente
 
 ### Requisitos
+
 - Python 3.13 o superior
 - PySide6 (`pip install PySide6`)
 
 ### Ejecutar desde el código
+
 ```powershell
 py -3.13 main.py
 ```
 
 ### Generar ejecutable (PyInstaller)
+
 ```powershell
 py -3.13 -m PyInstaller ForkYard.spec
 ```
+
 El resultado queda en la carpeta `dist/` (modo carpeta, sin consola, sin UPX).
 
 ---
@@ -69,7 +87,7 @@ El resultado queda en la carpeta `dist/` (modo carpeta, sin consola, sin UPX).
 - Algunos tweaks escriben en el **Registro de Windows**. Crea un punto de restauración antes de aplicar tweaks de nivel `Advanced`.
 - **Modo Simulación está activado por defecto**. Déjalo encendido hasta que estés seguro de lo que vas a aplicar.
 - La aplicación requiere **privilegios de administrador** para importar archivos `.reg`.
-- **SmartScreen** puede mostrar una advertencia al ejecutar el `.exe` compilado: es normal en aplicaciones sin firma digital como es la mia :(.
+- **SmartScreen** puede mostrar una advertencia al ejecutar el `.exe` compilado: es normal en aplicaciones sin firma digital como es la mía.
 
 ---
 
@@ -77,13 +95,13 @@ El resultado queda en la carpeta `dist/` (modo carpeta, sin consola, sin UPX).
 
 Todas las optimizaciones viven en `catalogo.json`. Cada entrada incluye:
 
-- **nombre y descripción** de lo que hace
-- **nivel de riesgo**: `Safe`, `Moderate` o `Advanced`
-- **categoría**: System, Gaming, Power, Services, GPU Settings, Drivers, Input Lag, Cleanup, Ping, RAM, Debloat & Privacy, Monitoring & Benchmarks, Startup & Processes, Browsers, Archivers, Media, Utilities
-- **tipo**: `reg`, `bat`, `cmd`, `nip` (local) o enlace externo (`is_external: true`)
-- **instrucciones** paso a paso
-- **requiere administrador**: si aplica cambios en `HKEY_LOCAL_MACHINE` o usa comandos del sistema
-- **reversión**: cómo deshacer el cambio (cuando existe un procedimiento real)
+- **Nombre y descripción** de lo que hace.
+- **Nivel de riesgo**: `Safe`, `Moderate` o `Advanced`.
+- **Categoría**: System, Gaming, Power, Services, GPU Settings, Drivers, Input Lag, Cleanup, Ping, RAM, Debloat & Privacy, Monitoring & Benchmarks, Startup & Processes, Browsers, Archivers, Media, Utilities.
+- **Tipo**: `reg`, `bat`, `cmd`, `nip` (local) o enlace externo (`is_external: true`).
+- **Instrucciones** paso a paso.
+- **Requiere administrador**: si aplica cambios en `HKEY_LOCAL_MACHINE` o usa comandos del sistema.
+- **Reversión**: cómo deshacer el cambio (cuando existe un procedimiento real).
 
 Puedes editar `catalogo.json` para añadir, quitar o modificar optimizaciones sin tocar el código Python.
 
@@ -93,7 +111,7 @@ Puedes editar `catalogo.json` para añadir, quitar o modificar optimizaciones si
 
 ForkYard **no redistribuye** ejecutables de terceros. Cuando seleccionas una herramienta externa, la aplicación solo abre su página oficial en tu navegador.
 
-Ejemplos incluidos: 7-Zip, VLC, Firefox, Brave, PowerToys, BleachBit, Process Explorer, Process Lasso, O&O ShutUp10, Win11Debloat, Chris Titus WinUtil, y muchos más.
+Ejemplos incluidos: 7-Zip, VLC, Firefox, Brave, PowerToys, BleachBit, Process Explorer, Process Lasso, O&O ShutUp10, Win11Debloat, Chris Titus WinUtil y muchos más.
 
 Cada enlace externo fue verificado contra su fuente oficial (fecha de verificación: 2026-10-19). Consulta `CREDITS` para la lista completa y las evidencias de verificación.
 
@@ -104,7 +122,7 @@ Cada enlace externo fue verificado contra su fuente oficial (fecha de verificaci
 Este proyecto está bajo la **Licencia MIT** con una cláusula adicional de **no uso comercial**:
 
 - Puedes usar, modificar y distribuir el software libremente con fines **no comerciales**.
-- Está **prohibido vender, licenciar o redistribuir** el Software (en código fuente o binario) con fines comerciales sin permiso escrito del titular de los derechos de autor.
+- Está **prohibido vender, licenciar o redistribuir** el software (en código fuente o binario) con fines comerciales sin permiso escrito del titular de los derechos de autor.
 
 Lee el archivo [`LICENSE`](LICENSE) para los términos completos.
 
@@ -118,7 +136,7 @@ Lee el archivo [`LICENSE`](LICENSE) para los términos completos.
 
 ## 🐛 Soporte
 
-- **Issues**: [https://github.com/zorlixxx/ForkYard/issues](https://github.com/zorlixxx/ForkYard/issues)
+- **Issues**: [GitHub Issues](https://github.com/zorlixxx/ForkYard/issues)
 - **Email**: zorlix1git@protonmail.com
 
 Reporta errores, pide funcionalidades o comparte tu experiencia con los tweaks aplicados.
