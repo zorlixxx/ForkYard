@@ -1,0 +1,2026 @@
+[
+  {
+    "category": "System",
+    "tweaks": [
+      {
+        "id": "disable_telemetry",
+        "name": "Disable Telemetry & Data Collection",
+        "description": "Stops Windows from sending diagnostic and usage data to Microsoft.",
+        "path": "recursos/System/telemetry.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "disable_bloatware",
+        "name": "Disable Bloatware & Suggestions",
+        "description": "Prevents Windows from automatically installing suggested apps and OEM bloatware.",
+        "path": "recursos/System/bloatware.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "disable_background_apps",
+        "name": "Disable Background Applications",
+        "description": "Prevents apps from running in the background to save CPU and RAM.",
+        "path": "recursos/System/background_apps.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "disable_transparency",
+        "name": "Disable Visual Transparency",
+        "description": "Disables transparency effects to improve UI responsiveness on lower-end hardware.",
+        "path": "recursos/System/transparency.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "Windows 10",
+        "compatibility_note": "Windows 11 removed the transparency effect, so this switch has no effect there.",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "disable_sync",
+        "name": "Disable Sync",
+        "description": "Disables Windows sync settings across devices.",
+        "path": "recursos/System/disable_sync.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "disable_maps_manager",
+        "name": "Disable Maps Manager Download",
+        "description": "Prevents automatic download of offline maps in the background.",
+        "path": "recursos/System/disable_maps_manager.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "disable_driver_updates",
+        "name": "Disable Automatic Driver Updates",
+        "description": "Prevents Windows Update from installing driver updates automatically.",
+        "path": "recursos/System/disable_driver_updates.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "registry_system_tweaks",
+        "name": "Registry & System Tweaks",
+        "description": "Advanced system tweaks including power, gaming, and shutdown settings. Restart may be required.",
+        "path": "recursos/Registry & BCD/tweaks del registro.reg",
+        "type": "reg",
+        "risk": "Advanced",
+        "reboot_required": true,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "windows_update_blocker",
+        "name": "Windows Update Blocker",
+        "description": "Free portable tool to block or enable Windows 10 and 11 automatic updates with one click.",
+        "url": "https://www.sordum.org/9470/",
+        "risk": "Safe",
+        "is_external": true,
+        "type": null,
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Sordum Team",
+        "license": "Freeware",
+        "instructions": [
+          "Extract the downloaded zip.",
+          "Run Wub.exe as administrator.",
+          "Select Disable Service and click Apply Now.",
+          "Enable Protect service settings to keep updates blocked."
+        ],
+        "tags": [
+          "updates",
+          "privacy"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "stopupdates10",
+        "name": "StopUpdates10",
+        "description": "Free tool to block or pause Windows 10 and 11 updates with a one-click restore.",
+        "url": "https://greatis.com/stopupdates10/",
+        "is_external": true,
+        "type": null,
+        "risk": "Moderate",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Greatis Software",
+        "license": "Freeware",
+        "instructions": [
+          "Download StopUpdates10 from the official site.",
+          "Run it as Administrator.",
+          "Click Stop Windows Updates to block, or Pause to delay.",
+          "Click Restore Windows Updates to re-enable."
+        ],
+        "tags": [
+          "updates",
+          "control"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ],
+    "group": "Optimization"
+  },
+  {
+    "category": "Gaming",
+    "tweaks": [
+      {
+        "id": "disable_game_dvr",
+        "name": "Disable Game DVR",
+        "description": "Turns off Windows Game Bar and background recording to reduce input lag.",
+        "path": "recursos/Gaming/11. Desactivar Game DVR.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "fullscreen_optimizations",
+        "name": "Disable Fullscreen Optimizations",
+        "description": "Fixes input lag and stuttering in games by disabling fullscreen optimizations.",
+        "path": "recursos/Gaming/9. Deshabilitar optimizaciones de pantalla completa.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "fullscreen_fix",
+        "name": "Fullscreen Fix",
+        "description": "Alternative fix for fullscreen application compatibility.",
+        "path": "recursos/Gaming/13. Pantalla Completa Fix.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "msi-afterburner",
+        "name": "MSI Afterburner",
+        "description": "Monitor and overclock your GPU, with fan curves and an in-game on-screen display.",
+        "url": "https://www.msi.com/Landing/afterburner",
+        "is_external": true,
+        "type": null,
+        "risk": "Moderate",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "MSI (Unwinder)",
+        "license": "Freeware",
+        "instructions": [
+          "Download Afterburner from the official MSI page.",
+          "Decline any bundled offers during install.",
+          "Use the sliders to tune clock, fan or voltage.",
+          "Apply profiles; use Reset to return to stock."
+        ],
+        "tags": [
+          "gaming",
+          "gpu"
+        ],
+        "logo": "nvidia",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ],
+    "group": "Optimization"
+  },
+  {
+    "category": "Power",
+    "tweaks": [
+      {
+        "id": "disable_power_throttling",
+        "name": "Disable Power Throttling",
+        "description": "Prevents Windows from limiting power to background processes.",
+        "path": "recursos/Power/3 Disable Power Throttling.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "max_performance",
+        "name": "Maximum Performance Power Plan",
+        "description": "Sets Windows to maximum performance power plan via batch script.",
+        "path": "recursos/Power/Maximo rendimiento.bat",
+        "type": "bat",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "disable_power_limit",
+        "name": "Disable Power Limiting",
+        "description": "Disables power limitations for better sustained performance.",
+        "path": "recursos/Power/10. Deshabilitar limitación de energía.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "disable_power_limit_alt",
+        "name": "Disable Power Limiting (Alternative)",
+        "description": "Alternative power limit disable tweak.",
+        "path": "recursos/Power/14. Deshabilitar la limitación de potencia.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "parkcontrol",
+        "name": "ParkControl",
+        "description": "Adjusts CPU core parking and power plans for better responsiveness or battery life.",
+        "url": "https://bitsum.com/parkcontrol/",
+        "is_external": true,
+        "type": null,
+        "risk": "Moderate",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Bitsum",
+        "license": "Freeware (Pro version available)",
+        "instructions": [
+          "Download the free installer from the Bitsum site.",
+          "Run ParkControl.",
+          "Choose a profile or disable core parking for responsiveness.",
+          "Use Restore Defaults to revert."
+        ],
+        "tags": [
+          "power",
+          "cpu"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ],
+    "group": "Optimization"
+  },
+  {
+    "category": "Services",
+    "tweaks": [
+      {
+        "id": "svc_diagnostics",
+        "name": "Disable Diagnostic Services",
+        "description": "Disables telemetry and diagnostic services (DiagTrack, etc.).",
+        "path": "recursos/Services/Disable Diagnostics & Telemetry Services.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "svc_extra_services",
+        "name": "Disable Extra Unnecessary Services",
+        "description": "Disables additional services not needed on most systems.",
+        "path": "recursos/Services/Disable Extra Unnecessary Services.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "svc_bluetooth",
+        "name": "Disable Bluetooth Services",
+        "description": "Disables Bluetooth services. Use only if you don't use Bluetooth.",
+        "path": "recursos/Services/OPTIONAL Disable Bluetooth Services.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "svc_printers",
+        "name": "Disable Printer Services",
+        "description": "Disables Print Spooler. Use only if you don't have a printer.",
+        "path": "recursos/Services/OPTIONAL Disable Printer Services.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "svc_xbox",
+        "name": "Disable Xbox Services",
+        "description": "Disables Xbox Live and related services.",
+        "path": "recursos/Services/OPTIONAL Disable Xbox Services.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "svc_maps",
+        "name": "Disable Download Maps Manager",
+        "description": "Disables the Download Maps Manager service.",
+        "path": "recursos/Services/OPTIONAL Disable Download Maps Manager.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "svc_optimize_windows",
+        "name": "Optimize Windows Settings",
+        "description": "Service optimization script for general system performance.",
+        "path": "recursos/Services/Optimizar Ajustes de Windows.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": true,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "The file also switches off the Windows 10 transparency effect, which Windows 11 does not use. The remaining settings apply to both versions.",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "svc_improve_latency",
+        "name": "Improve Latency 2",
+        "description": "Service tweaks to reduce system latency.",
+        "path": "recursos/Services/Mejorar Latencia 2.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "svc_improve_latency_cmd",
+        "name": "Improve Latency (script)",
+        "description": "Modifica la configuración de arranque BCD (disabledynamictick, useplatformtick). Requiere administrador y reinicio. Eficacia no demostrada en Windows 10/11 modernos.",
+        "path": "recursos/Services/Mejorar Latencia.cmd",
+        "type": "cmd",
+        "risk": "Advanced",
+        "reboot_required": true,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "svc_optimize_mouse",
+        "name": "Optimize Mouse",
+        "description": "Mouse-related service optimizations.",
+        "path": "recursos/Services/Optimizar Mouse.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      }
+    ],
+    "group": "Optimization"
+  },
+  {
+    "category": "GPU Settings",
+    "tweaks": [
+      {
+        "id": "nvidia_disable_preemption",
+        "name": "NVIDIA - Disable Preemption",
+        "description": "Reduces GPU task preemption for lower input latency.",
+        "path": "recursos/GPU/NVIDIA/9 Disable preemption.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "nvidia_profile_inspector",
+        "name": "NVIDIA Profile Inspector",
+        "description": "NVIDIA profile editor for per-game 3D settings, power management and display tweaks.",
+        "url": "https://github.com/Orbmu2k/NvidiaProfileInspector",
+        "risk": "Safe",
+        "is_external": true,
+        "type": null,
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Orbmu2k",
+        "license": "MIT",
+        "instructions": [
+          "Download the latest release on the GitHub Releases page.",
+          "Extract the zip and run NvidiaProfileInspector.exe.",
+          "Open a game profile, edit values, then Apply.",
+          "Use Environment > Restore Defaults to revert."
+        ],
+        "tags": [
+          "gpu",
+          "nvidia"
+        ],
+        "vendor": "NVIDIA",
+        "logo": "nvidia",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "nvidia_nip_profile",
+        "name": "Load NVIDIA Profile (.nip)",
+        "description": "Import the bundled .nip profile in NVIDIA Profile Inspector (manual steps are shown).",
+        "path": "recursos/GPU/NVIDIA/2 NEW Optimized Profile.nip",
+        "type": "nip",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "nvidia",
+        "requires_admin": false,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "The profile is imported by NVIDIA Profile Inspector, not by ForkYard.",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "amd_disable_ulps",
+        "name": "AMD Radeon - Disable Ultra Low Power State",
+        "description": "Disables Ultra Low Power State to prevent GPU clock drops.",
+        "path": "recursos/GPU/AMD/1 Disable Ultra Low Power State.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "amd_tweak_settings",
+        "name": "AMD Radeon - Tweak Software Settings",
+        "description": "Applies optimized registry tweaks for Radeon Software.",
+        "path": "recursos/GPU/AMD/2 Tweak Some Radeon Software Settings.reg",
+        "type": "reg",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "nvcleanstall",
+        "name": "NVCleanstall",
+        "description": "Build a minimal NVIDIA driver install by excluding components you do not want.",
+        "url": "https://www.techpowerup.com/download/techpowerup-nvcleanstall/",
+        "is_external": true,
+        "type": null,
+        "risk": "Moderate",
+        "reboot_required": true,
+        "third_party": true,
+        "author": "TechPowerUp",
+        "license": "Freeware",
+        "instructions": [
+          "Download the installer from the TechPowerUp page.",
+          "Run it and let it fetch the latest driver.",
+          "Uncheck the packages you do not need (telemetry, USB-C, etc.).",
+          "Install, then restart Windows."
+        ],
+        "tags": [
+          "gpu",
+          "nvidia",
+          "drivers"
+        ],
+        "vendor": "NVIDIA",
+        "logo": "nvidia",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "nvidia-app",
+        "name": "NVIDIA App",
+        "description": "Official NVIDIA app for driver updates, game optimization and GPU tuning.",
+        "url": "https://www.nvidia.com/en-us/software/nvidia-app/",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "NVIDIA",
+        "license": "Freeware (proprietary)",
+        "instructions": [
+          "Download the app from the NVIDIA site.",
+          "Install it (replaces GeForce Experience).",
+          "Use Drivers to update and Performance to tune.",
+          "Roll back a driver from the Drivers tab if needed."
+        ],
+        "tags": [
+          "gpu",
+          "nvidia"
+        ],
+        "vendor": "NVIDIA",
+        "logo": "nvidia",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "amd-adrenalin",
+        "name": "AMD Software: Adrenalin",
+        "description": "Official AMD control panel for GPU settings, recording, performance tuning and drivers.",
+        "url": "https://www.amd.com/en/products/software/adrenalin.html",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "AMD",
+        "license": "Freeware (proprietary)",
+        "instructions": [
+          "Get the current Adrenalin package from the AMD site.",
+          "Install it for your Radeon GPU.",
+          "Use Gaming and Performance tabs to tune and record.",
+          "Reset to defaults from Global Settings if needed."
+        ],
+        "tags": [
+          "gpu",
+          "amd"
+        ],
+        "vendor": "AMD",
+        "logo": "amd",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "ddu",
+        "name": "Display Driver Uninstaller (DDU)",
+        "description": "Removes graphics drivers completely, including leftovers, before a clean install.",
+        "url": "https://www.wagnardsoft.com/display-driver-uninstaller-ddu",
+        "is_external": true,
+        "type": null,
+        "risk": "Moderate",
+        "reboot_required": true,
+        "third_party": true,
+        "author": "Wagnard (Wagnardsoft)",
+        "license": "Freeware",
+        "instructions": [
+          "Download DDU from the official Wagnardsoft site.",
+          "Boot into Safe Mode and launch DDU.",
+          "Pick your GPU vendor and click Clean and restart.",
+          "Install the new driver after reboot."
+        ],
+        "tags": [
+          "gpu",
+          "drivers"
+        ],
+        "vendor": "any",
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ],
+    "group": "Optimization"
+  },
+  {
+    "category": "Drivers",
+    "tweaks": [
+      {
+        "id": "driver_magician_reg",
+        "name": "Driver Magician Registry Tweak",
+        "description": "Apply AFTER installing Driver Magician.",
+        "path": "recursos/Drivers/RegMagician.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "driver_magician_link",
+        "name": "Driver Magician",
+        "description": "Backs up, restores and updates Windows drivers. Trial software from GoldSolution Software.",
+        "url": "https://www.drivermagician.com/",
+        "risk": "Safe",
+        "is_external": true,
+        "type": null,
+        "reboot_required": false,
+        "third_party": true,
+        "author": "GoldSolution Software",
+        "license": "Trial (shareware)",
+        "instructions": [
+          "Download the free trial from the official site.",
+          "Run it and choose Backup Drivers to save current drivers.",
+          "This is paid/trial software; free option: save drivers from the NVIDIA, AMD and Intel pages in Drivers.",
+          "Restore drivers from backup after a reinstall."
+        ],
+        "tags": [
+          "drivers",
+          "backup"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "nvidia-drivers",
+        "name": "NVIDIA Drivers",
+        "description": "Official NVIDIA driver download for GeForce graphics cards.",
+        "url": "https://www.nvidia.com/en-us/drivers/",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": true,
+        "third_party": true,
+        "author": "NVIDIA",
+        "license": "Freeware (proprietary)",
+        "instructions": [
+          "Select your product and Windows version.",
+          "Download the Game Ready or Studio driver.",
+          "Run the installer and choose Express.",
+          "Restart to finish."
+        ],
+        "tags": [
+          "drivers",
+          "gpu"
+        ],
+        "logo": "nvidia",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "amd-drivers",
+        "name": "AMD Drivers",
+        "description": "Official AMD driver and software download for Radeon graphics and chipsets.",
+        "url": "https://www.amd.com/en/support/download/drivers.html",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": true,
+        "third_party": true,
+        "author": "AMD",
+        "license": "Freeware (proprietary)",
+        "instructions": [
+          "Choose your Radeon or chipset product.",
+          "Download the Auto-Detect or specific driver.",
+          "Run the installer.",
+          "Restart to finish."
+        ],
+        "tags": [
+          "drivers",
+          "gpu"
+        ],
+        "logo": "amd",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "intel-drivers",
+        "name": "Intel Drivers",
+        "description": "Official Intel download center for graphics, chipset and wireless drivers.",
+        "url": "https://www.intel.com/content/www/us/en/download-center/home.html",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": true,
+        "third_party": true,
+        "author": "Intel",
+        "license": "Freeware (proprietary)",
+        "instructions": [
+          "Open the Intel Download Center.",
+          "Use auto-detect or search your product.",
+          "Download the driver package.",
+          "Run it and restart if prompted."
+        ],
+        "tags": [
+          "drivers"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ],
+    "group": "Optimization"
+  },
+  {
+    "category": "Input Lag",
+    "tweaks": [
+      {
+        "id": "reduce_inputlag",
+        "name": "Reduce Input Lag",
+        "description": "Reduces system input lag via registry adjustments.",
+        "path": "recursos/InputLag/Reducir InputLag.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "better_response",
+        "name": "Better Response",
+        "description": "Improves system responsiveness.",
+        "path": "recursos/InputLag/Peripherals/mejor respuesta.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "mouse_optimization",
+        "name": "Mouse Optimization",
+        "description": "Optimizes mouse response.",
+        "path": "recursos/InputLag/Peripherals/Optimización de mouse.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "controller_optimization",
+        "name": "Controller Optimization",
+        "description": "Optimizes gamepad/controller input.",
+        "path": "recursos/InputLag/Peripherals/Optimizacion Mando.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "latencymon",
+        "name": "LatencyMon",
+        "description": "Measures DPC and ISR latency to find drivers that cause audio dropouts and stutter.",
+        "url": "https://www.resplendence.com/latencymon",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Resplendence Software",
+        "license": "Freeware (Home Edition)",
+        "instructions": [
+          "Download LatencyMon from the official site.",
+          "Run it and start the latency test.",
+          "Let it run for a few minutes.",
+          "Check the report for the highest DPC/ISR drivers."
+        ],
+        "tags": [
+          "latency",
+          "audio"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ],
+    "group": "Optimization"
+  },
+  {
+    "category": "Cleanup",
+    "tweaks": [
+      {
+        "id": "startup_apps",
+        "name": "Windows Startup Apps",
+        "description": "Open Windows Startup manager.",
+        "command": "ms-settings:startupapps",
+        "risk": "Safe",
+        "is_external": true,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "ForkYard only opens a Windows settings page and changes nothing."
+      },
+      {
+        "id": "geek_uninstaller",
+        "name": "Geek Uninstaller",
+        "description": "Portable uninstaller that removes programs and their leftover files. Free for personal use.",
+        "url": "https://geekuninstaller.com/",
+        "risk": "Safe",
+        "is_external": true,
+        "type": null,
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Thomas Koen",
+        "license": "Freeware (Pro version available)",
+        "instructions": [
+          "Download the portable executable from the official site.",
+          "Run Geek Uninstaller.exe (no install needed).",
+          "Right-click a program and choose Uninstall.",
+          "Use the leftover scan afterwards to remove leftovers."
+        ],
+        "tags": [
+          "cleanup",
+          "uninstall"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "clean_log_files",
+        "name": "Clean Log Files",
+        "description": "Removes system log files.",
+        "path": "recursos/Cleanup/archivos de registro.cmd",
+        "type": "cmd",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "clean_signin_files",
+        "name": "Clean Sign-in Files",
+        "description": "Limpia archivos temporales de usuario, Prefetch y temp de Windows. La limpieza de registros de eventos es una operación intencional, destructiva y no reversible.",
+        "path": "recursos/Cleanup/archivos inicio sesion.bat",
+        "type": "bat",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "clean_update_cache",
+        "name": "Clean Update Cache",
+        "description": "Borra la caché de Windows Update (SoftwareDistribution) y restaura los servicios al finalizar. Requiere privilegios de administrador.",
+        "path": "recursos/Cleanup/cache actualizaciones.bat",
+        "type": "bat",
+        "risk": "Moderate",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "clean_temps",
+        "name": "Clean Temp Files",
+        "description": "Removes temporary files.",
+        "path": "recursos/Cleanup/temps.bat",
+        "type": "bat",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "bleachbit",
+        "name": "BleachBit",
+        "description": "Free disk cleaner that removes junk files, caches and traces from many applications.",
+        "url": "https://github.com/bleachbit/bleachbit",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "BleachBit contributors",
+        "license": "GPL-3.0",
+        "instructions": [
+          "Download the installer from the GitHub Releases page.",
+          "Run BleachBit (as Administrator for system files).",
+          "Tick the folders and apps to clean.",
+          "Preview, then Clean. Deleted files are not recoverable."
+        ],
+        "tags": [
+          "cleanup",
+          "disk"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "wiztree",
+        "name": "WizTree",
+        "description": "Very fast disk space analyzer that finds the largest files on a drive in seconds.",
+        "url": "https://www.diskanalyzer.com/",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Antibody Software",
+        "license": "Free for personal use (donationware)",
+        "instructions": [
+          "Download WizTree from the official site.",
+          "Run it and select a drive.",
+          "Use the tree map to spot the largest files.",
+          "Free for personal use; business use needs a license."
+        ],
+        "tags": [
+          "cleanup",
+          "storage"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ],
+    "group": "Optimization"
+  },
+  {
+    "category": "Ping",
+    "tweaks": [
+      {
+        "id": "clean_network_logs",
+        "name": "Clean Network Logs",
+        "description": "Removes network-related log files.",
+        "path": "recursos/Ping/clean log files.bat",
+        "type": "bat",
+        "risk": "Safe",
+        "reboot_required": false,
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "optimize_ping",
+        "name": "Optimize Ping / Network",
+        "description": "Ajustes de red específicos para Fortnite (QoS con DSCP 46) y modificación de NetBIOS (Start=4). Requiere reinicio y privilegios de administrador.",
+        "path": "recursos/Ping/mejor PING.BAT",
+        "type": "bat",
+        "risk": "Moderate",
+        "reboot_required": true,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "Run 'Reset network adapter' from the Ping category to restore the default TCP/IP stack."
+      },
+      {
+        "id": "reset_network_adapter",
+        "name": "Reset Network Adapter",
+        "description": "Restablece la configuración de red (DNS, winsock, TCP/IPv4/IPv6). Requiere reinicio y privilegios de administrador.",
+        "path": "recursos/Ping/Revertir cambios/REINICIAR TU ADAPTADOR DE RED.bat",
+        "type": "bat",
+        "risk": "Moderate",
+        "reboot_required": true,
+        "logo": "",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      },
+      {
+        "id": "dns_jumper",
+        "name": "DNS Jumper",
+        "description": "Switch DNS servers quickly to speed up browsing or lower lag; includes a fastest-DNS test.",
+        "url": "https://www.sordum.org/7952/",
+        "risk": "Safe",
+        "is_external": true,
+        "type": null,
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Sordum Team",
+        "license": "Freeware",
+        "instructions": [
+          "Extract and run DnsJumper.exe.",
+          "Pick a DNS group or run Fastest DNS to test.",
+          "Select your adapter and click Apply DNS.",
+          "Choose Default (Restore DNS) to revert."
+        ],
+        "tags": [
+          "network",
+          "dns"
+        ],
+        "logo": "dnsjumper",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "tcp-optimizer",
+        "name": "TCP Optimizer",
+        "description": "Tunes TCP/IP settings for your connection to improve throughput and lower latency.",
+        "url": "https://speedguide.net/downloads.php",
+        "is_external": true,
+        "type": null,
+        "risk": "Moderate",
+        "reboot_required": true,
+        "third_party": true,
+        "author": "SpeedGuide.net",
+        "license": "Freeware",
+        "instructions": [
+          "Download TCP Optimizer from SpeedGuide.net.",
+          "Run it as Administrator.",
+          "Set your connection speed and pick the Optimize settings.",
+          "Reboot, and use the Defaults button to revert."
+        ],
+        "tags": [
+          "network",
+          "tweaks"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ],
+    "group": "Optimization"
+  },
+  {
+    "category": "RAM",
+    "tweaks": [
+      {
+        "id": "ram_4gb",
+        "name": "4 GB RAM Optimization",
+        "description": "Registry tweaks optimized for 4 GB RAM systems.",
+        "path": "recursos/RAM/4GB RAM OPTIMIZAR.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": true,
+        "logo": "ram",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "Apply 'Restore default values' from the RAM category to reset the service host split threshold."
+      },
+      {
+        "id": "ram_6gb",
+        "name": "6 GB RAM Optimization",
+        "description": "Registry tweaks optimized for 6 GB RAM systems.",
+        "path": "recursos/RAM/6GB RAM OPTIMIZAR.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": true,
+        "logo": "ram",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "Apply 'Restore default values' from the RAM category to reset the service host split threshold."
+      },
+      {
+        "id": "ram_8gb",
+        "name": "8 GB RAM Optimization",
+        "description": "Registry tweaks optimized for 8 GB RAM systems.",
+        "path": "recursos/RAM/8GB RAM OPTIMIZAR.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": true,
+        "logo": "ram",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "Apply 'Restore default values' from the RAM category to reset the service host split threshold."
+      },
+      {
+        "id": "ram_12gb",
+        "name": "12 GB RAM Optimization",
+        "description": "Registry tweaks optimized for 12 GB RAM systems.",
+        "path": "recursos/RAM/12GB RAM OPTIMIZAR.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": true,
+        "logo": "ram",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "Apply 'Restore default values' from the RAM category to reset the service host split threshold."
+      },
+      {
+        "id": "ram_16gb",
+        "name": "16 GB RAM Optimization",
+        "description": "Registry tweaks optimized for 16 GB RAM systems.",
+        "path": "recursos/RAM/16GB RAM OPTIMIZAR.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": true,
+        "logo": "ram",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "Apply 'Restore default values' from the RAM category to reset the service host split threshold."
+      },
+      {
+        "id": "ram_24gb",
+        "name": "24 GB RAM Optimization",
+        "description": "Registry tweaks optimized for 24 GB RAM systems.",
+        "path": "recursos/RAM/24GB RAM OPTIMIZAR.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": true,
+        "logo": "ram",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "Apply 'Restore default values' from the RAM category to reset the service host split threshold."
+      },
+      {
+        "id": "ram_32gb",
+        "name": "32 GB RAM Optimization",
+        "description": "Registry tweaks optimized for 32 GB RAM systems.",
+        "path": "recursos/RAM/32GB RAM OPTIMIZAR.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": true,
+        "logo": "ram",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "Apply 'Restore default values' from the RAM category to reset the service host split threshold."
+      },
+      {
+        "id": "ram_64gb",
+        "name": "64 GB RAM Optimization",
+        "description": "Registry tweaks optimized for 64 GB RAM systems.",
+        "path": "recursos/RAM/64GB RAM OPTIMIZAR.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": true,
+        "logo": "ram",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "Apply 'Restore default values' from the RAM category to reset the service host split threshold."
+      },
+      {
+        "id": "ram_reset",
+        "name": "Restore Default RAM Values",
+        "description": "Restores default memory management settings.",
+        "path": "recursos/RAM/Restablecer valores predeterminados.reg",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": true,
+        "logo": "ram",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "Imports the default value of the service host split threshold again."
+      },
+      {
+        "id": "smart_ram_opt",
+        "name": "Smart RAM Optimization",
+        "description": "Automatically applies the best registry settings based on your installed RAM.",
+        "path": "recursos/RAM/",
+        "type": "reg",
+        "risk": "Safe",
+        "reboot_required": true,
+        "is_dynamic": true,
+        "logo": "ram",
+        "requires_admin": true,
+        "compatibility": "Windows 10 & 11",
+        "compatibility_note": "",
+        "reversal": "No automatic undo is provided. ForkYard keeps a copy of the file in the backups folder as a reference."
+      }
+    ],
+    "group": "Optimization"
+  },
+  {
+    "category": "Debloat & Privacy",
+    "group": "Optimization",
+    "tweaks": [
+      {
+        "id": "win11-debloat",
+        "name": "Win11Debloat",
+        "description": "Removes Windows bloatware, telemetry and unwanted apps on Windows 11 with a simple interface.",
+        "url": "https://github.com/Raphire/Win11Debloat",
+        "is_external": true,
+        "type": null,
+        "risk": "Advanced",
+        "reboot_required": true,
+        "third_party": true,
+        "author": "Raphire",
+        "license": "MIT",
+        "instructions": [
+          "Create a restore point before making changes.",
+          "Download and extract the latest release.",
+          "Run the GUI or script as Administrator.",
+          "Pick what to remove, apply, then restart."
+        ],
+        "tags": [
+          "debloat",
+          "privacy"
+        ],
+        "logo": "win11debloat",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "privacy-sexy",
+        "name": "privacy.sexy",
+        "description": "Open-source scripts that disable Windows telemetry and data collection, with each setting documented.",
+        "url": "https://github.com/undergroundwires/privacy.sexy",
+        "is_external": true,
+        "type": null,
+        "risk": "Advanced",
+        "reboot_required": true,
+        "third_party": true,
+        "author": "undergroundwires",
+        "license": "AGPL-3.0",
+        "instructions": [
+          "Create a restore point before making changes.",
+          "Run privacy.sexy in your browser from the repo.",
+          "Choose a recommended script and review settings.",
+          "Apply it, then restart Windows."
+        ],
+        "tags": [
+          "privacy",
+          "telemetry"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "winutil",
+        "name": "Chris Titus WinUtil",
+        "description": "Windows toolbox for tweaks, updates, cleanup and debloat with a clear tabbed interface.",
+        "url": "https://github.com/ChrisTitusTech/winutil",
+        "is_external": true,
+        "type": null,
+        "risk": "Advanced",
+        "reboot_required": true,
+        "third_party": true,
+        "author": "Chris Titus Tech",
+        "license": "MIT",
+        "instructions": [
+          "Create a restore point before making changes.",
+          "Run the command from the README in PowerShell.",
+          "Use the Tweaks tab and pick a preset or options.",
+          "Apply, then restart to finish."
+        ],
+        "tags": [
+          "debloat",
+          "tweaks"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "oo-shutup10",
+        "name": "O&O ShutUp10",
+        "description": "Free antispy tool that turns off Windows 10 and 11 telemetry and data sharing options.",
+        "url": "https://www.oo-software.com/en/shutup10",
+        "is_external": true,
+        "type": null,
+        "risk": "Moderate",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "O&O Software GmbH",
+        "license": "Freeware (proprietary)",
+        "instructions": [
+          "Download the free portable version from the official site.",
+          "Run it and review the recommended settings.",
+          "Toggle the options you want to disable.",
+          "Revert any setting from the Actions menu."
+        ],
+        "tags": [
+          "privacy",
+          "telemetry"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "sophia-script",
+        "name": "Sophia Script for Windows",
+        "description": "PowerShell preset that applies a wide set of Windows privacy, performance and interface tweaks.",
+        "url": "https://github.com/farag2/Sophia-Script-for-Windows",
+        "is_external": true,
+        "type": null,
+        "risk": "Advanced",
+        "reboot_required": true,
+        "third_party": true,
+        "author": "farag2",
+        "license": "MIT",
+        "instructions": [
+          "Create a restore point before making changes.",
+          "Download the release for your Windows version.",
+          "Open PowerShell as Administrator and run Sophia.ps1.",
+          "Pick tweaks, apply, then restart."
+        ],
+        "tags": [
+          "tweaks",
+          "privacy"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ]
+  },
+  {
+    "category": "Monitoring & Benchmarks",
+    "group": "Optimization",
+    "tweaks": [
+      {
+        "id": "libre-hardware-monitor",
+        "name": "LibreHardwareMonitor",
+        "description": "Real-time monitoring of temperatures, clocks, fans and load for CPU, GPU and drives.",
+        "url": "https://github.com/LibreHardwareMonitor/LibreHardwareMonitor",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "LibreHardwareMonitor contributors",
+        "license": "MPL-2.0",
+        "instructions": [
+          "Download the latest release from GitHub.",
+          "Run LibreHardwareMonitor.exe as Administrator.",
+          "Watch sensors in the window or tray.",
+          "Close the app to stop monitoring."
+        ],
+        "tags": [
+          "monitoring",
+          "sensors"
+        ],
+        "logo": "librehardwaremonitor",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "hwinfo",
+        "name": "HWiNFO",
+        "description": "Detailed hardware inventory and sensor monitoring with logging for Windows.",
+        "url": "https://www.hwinfo.com/",
+        "is_external": true,
+        "type": null,
+        "risk": "Advanced",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "REALiX s.r.o.",
+        "license": "Freeware for personal use (Pro for commercial)",
+        "instructions": [
+          "Download from the official site and verify the REALiX signature.",
+          "Some antivirus tools flag the kernel driver; this is a known false positive.",
+          "Run HWiNFO64 and pick sensors-only mode.",
+          "Exit the app to unload the driver."
+        ],
+        "tags": [
+          "monitoring",
+          "hardware"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "crystal-disk-info",
+        "name": "CrystalDiskInfo",
+        "description": "Checks SSD and hard drive health with S.M.A.R.T. data and warns before failure.",
+        "url": "https://crystalmark.info/en/software/crystaldiskinfo/",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "hiyohiyo (Crystal Dew World)",
+        "license": "MIT",
+        "instructions": [
+          "Download CrystalDiskInfo from the official site.",
+          "Install and run it or use the portable version.",
+          "Check each drive health status and temperature.",
+          "Back up data if status is Caution or Bad."
+        ],
+        "tags": [
+          "storage",
+          "health"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ]
+  },
+  {
+    "category": "Startup & Processes",
+    "group": "Optimization",
+    "tweaks": [
+      {
+        "id": "autoruns",
+        "name": "Autoruns (Sysinternals)",
+        "description": "Shows every program that starts with Windows and lets you disable the ones you do not need.",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns",
+        "is_external": true,
+        "type": null,
+        "risk": "Moderate",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Microsoft (Sysinternals)",
+        "license": "Freeware (Microsoft Software License Terms)",
+        "instructions": [
+          "Download and extract Autoruns from the Microsoft page.",
+          "Run Autoruns.exe and accept the license.",
+          "Uncheck entries you do not want to start.",
+          "Reboot to confirm nothing important breaks."
+        ],
+        "tags": [
+          "startup",
+          "processes"
+        ],
+        "logo": "sysinternal",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "process-explorer",
+        "name": "Process Explorer (Sysinternals)",
+        "description": "Advanced task manager that shows which processes use files, DLLs, CPU and memory.",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Microsoft (Sysinternals)",
+        "license": "Freeware (Microsoft Software License Terms)",
+        "instructions": [
+          "Download and extract Process Explorer.",
+          "Run procexp.exe and accept the license.",
+          "Inspect processes; use Find to search handles or DLLs.",
+          "End processes only if you know what they are."
+        ],
+        "tags": [
+          "processes",
+          "monitoring"
+        ],
+        "logo": "sysinternal",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "process-lasso",
+        "name": "Process Lasso",
+        "description": "Keeps your PC responsive by managing process priorities, CPU affinities and power plans.",
+        "url": "https://bitsum.com/process-lasso/",
+        "is_external": true,
+        "type": null,
+        "risk": "Moderate",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Bitsum",
+        "license": "Freeware (Pro version available)",
+        "instructions": [
+          "Download the free installer from the Bitsum site.",
+          "Install and run Process Lasso.",
+          "Let ProBalance run, or set rules per process.",
+          "Revert by removing rules or uninstalling."
+        ],
+        "tags": [
+          "processes",
+          "performance"
+        ],
+        "logo": "processlasso",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ]
+  },
+  {
+    "category": "Browsers",
+    "group": "QoL",
+    "tweaks": [
+      {
+        "id": "firefox",
+        "name": "Firefox",
+        "description": "Private, independent web browser with strong tracking protection by default.",
+        "url": "https://www.mozilla.org/firefox/",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Mozilla",
+        "license": "MPL-2.0",
+        "instructions": [
+          "Download Firefox from the Mozilla site.",
+          "Run the installer and import your data.",
+          "Enable Enhanced Tracking Protection in Settings.",
+          "Install the arkenfox or Betterfox profile below if you want more."
+        ],
+        "tags": [
+          "browser",
+          "privacy"
+        ],
+        "logo": "firefoxbrowser",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "brave",
+        "name": "Brave",
+        "description": "Privacy-focused browser that blocks ads and trackers and loads pages quickly.",
+        "url": "https://brave.com/",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Brave Software",
+        "license": "MPL-2.0",
+        "instructions": [
+          "Download Brave from the official site.",
+          "Run the installer and import your bookmarks.",
+          "Keep Shields on to block trackers and ads.",
+          "Adjust Shields level per site from the address bar."
+        ],
+        "tags": [
+          "browser",
+          "privacy"
+        ],
+        "logo": "brave",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "arkenfox-user-js",
+        "name": "arkenfox user.js",
+        "description": "Hardened Firefox configuration file that strengthens privacy and anti-tracking.",
+        "url": "https://github.com/arkenfox/user.js",
+        "is_external": true,
+        "type": null,
+        "risk": "Moderate",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "arkenfox",
+        "license": "MIT",
+        "instructions": [
+          "Download user.js from the GitHub repo.",
+          "Copy it into your Firefox profile folder.",
+          "Start Firefox to apply the settings.",
+          "Delete user.js to revert to defaults."
+        ],
+        "tags": [
+          "browser",
+          "privacy"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "betterfox",
+        "name": "Betterfox",
+        "description": "Set of Firefox preference tweaks that improve privacy, speed and security.",
+        "url": "https://github.com/yokoffing/Betterfox",
+        "is_external": true,
+        "type": null,
+        "risk": "Moderate",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "yokoffing",
+        "license": "MIT",
+        "instructions": [
+          "Download the Betterfox.js file from GitHub.",
+          "Place it in your Firefox profile folder.",
+          "Start Firefox to load the preferences.",
+          "Remove the file to return to defaults."
+        ],
+        "tags": [
+          "browser",
+          "performance"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ]
+  },
+  {
+    "category": "Archivers",
+    "group": "QoL",
+    "tweaks": [
+      {
+        "id": "7-zip",
+        "name": "7-Zip",
+        "description": "Free file archiver with high compression and support for many formats.",
+        "url": "https://www.7-zip.org/",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Igor Pavlov",
+        "license": "LGPL (with BSD and unRAR parts)",
+        "instructions": [
+          "Download the installer for your Windows version.",
+          "Run it and follow the setup.",
+          "Right-click files to add or extract archives.",
+          "Set file associations in Tools > Options."
+        ],
+        "tags": [
+          "archiver",
+          "files"
+        ],
+        "logo": "7zip",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "peazip",
+        "name": "PeaZip",
+        "description": "Free, open source file archiver with a clean interface and strong compression.",
+        "url": "https://github.com/peazip/PeaZip",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Giorgio Tani",
+        "license": "LGPL-3.0",
+        "instructions": [
+          "Download PeaZip from the GitHub Releases page.",
+          "Install or extract the portable build.",
+          "Use it to create and extract archives.",
+          "Manage formats and associations in Options."
+        ],
+        "tags": [
+          "archiver",
+          "files"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ]
+  },
+  {
+    "category": "Media",
+    "group": "QoL",
+    "tweaks": [
+      {
+        "id": "vlc",
+        "name": "VLC media player",
+        "description": "Plays almost any audio and video format, including discs and streams.",
+        "url": "https://www.videolan.org/vlc/",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "VideoLAN",
+        "license": "GPL-2.0 / LGPL-2.1",
+        "instructions": [
+          "Download VLC for Windows from videolan.org.",
+          "Run the installer with default options.",
+          "Open media files or drag them into the window.",
+          "Adjust codecs and output in Tools > Preferences."
+        ],
+        "tags": [
+          "media",
+          "player"
+        ],
+        "logo": "vlcmediaplayer",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "mpv",
+        "name": "mpv",
+        "description": "Lightweight, scriptable media player focused on performance and quality.",
+        "url": "https://github.com/mpv-player/mpv",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "mpv contributors",
+        "license": "GPL-2.0 / LGPL-2.1",
+        "instructions": [
+          "Download a Windows build from the mpv site or GitHub.",
+          "Run mpv.exe or use the installer.",
+          "Open files by dragging them onto the player.",
+          "Tune quality with a config file if needed."
+        ],
+        "tags": [
+          "media",
+          "player"
+        ],
+        "logo": "mpv",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ]
+  },
+  {
+    "category": "Utilities",
+    "group": "QoL",
+    "tweaks": [
+      {
+        "id": "powertoys",
+        "name": "PowerToys",
+        "description": "Microsoft utilities for window layouts, file preview, rename and shortcuts.",
+        "url": "https://github.com/microsoft/PowerToys",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Microsoft",
+        "license": "MIT",
+        "instructions": [
+          "Download the installer from GitHub Releases.",
+          "Run it and enable the utilities you want.",
+          "Configure FancyZones, Peek, Rename and more in Settings.",
+          "Turn off any tool you do not use."
+        ],
+        "tags": [
+          "productivity",
+          "utilities"
+        ],
+        "logo": "",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "notepad-plus-plus",
+        "name": "Notepad++",
+        "description": "Popular free source code and text editor with many language modes.",
+        "url": "https://github.com/notepad-plus-plus/notepad-plus-plus",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "Don Ho",
+        "license": "GPL-2.0",
+        "instructions": [
+          "Download the installer from the GitHub Releases page.",
+          "Run it and follow the setup.",
+          "Open files and edit with syntax highlighting.",
+          "Install plugins via the Plugin Admin menu."
+        ],
+        "tags": [
+          "productivity",
+          "editor"
+        ],
+        "logo": "notepadplusplus",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      },
+      {
+        "id": "sharex",
+        "name": "ShareX",
+        "description": "Screenshot, screen recording and annotation tool with many export options.",
+        "url": "https://github.com/ShareX/ShareX",
+        "is_external": true,
+        "type": null,
+        "risk": "Safe",
+        "reboot_required": false,
+        "third_party": true,
+        "author": "ShareX contributors",
+        "license": "GPL-3.0",
+        "instructions": [
+          "Download ShareX from the GitHub Releases page.",
+          "Run the installer.",
+          "Set hotkeys for capture, scroll capture or recording.",
+          "Choose where captures are saved or uploaded."
+        ],
+        "tags": [
+          "productivity",
+          "capture"
+        ],
+        "logo": "sharex",
+        "requires_admin": false,
+        "compatibility": "",
+        "compatibility_note": "",
+        "reversal": "Undo it with the reset or restore option of the tool itself.",
+        "verification_date": "2026-10-19"
+      }
+    ]
+  }
+]

@@ -1,0 +1,87 @@
+Third-Party Tools and Licenses
+==============================
+
+This application does not redistribute any third-party software. It links to
+official download pages and ships only the registry and script files stored in
+the `recursos/` folder. Nothing below is bundled; the app simply opens the
+official page in your browser.
+
+Every external entry was verified on 2026-10-19 (official source, Windows 10/11
+support, license and activity checked). See docs/SOURCES.md for the evidence.
+
+External links - Optimization (not included in this repository):
+- Debloat & Privacy
+  - Win11Debloat (Raphire) - MIT - https://github.com/Raphire/Win11Debloat
+  - privacy.sexy (undergroundwires) - AGPL-3.0 - https://github.com/undergroundwires/privacy.sexy
+  - Chris Titus WinUtil (Chris Titus Tech) - MIT - https://github.com/ChrisTitusTech/winutil
+  - O&O ShutUp10 (O&O Software GmbH) - Freeware (proprietary) - https://www.oo-software.com/en/shutup10
+  - Sophia Script for Windows (farag2) - MIT - https://github.com/farag2/Sophia-Script-for-Windows
+- Startup & Processes
+  - Autoruns (Microsoft / Sysinternals) - Freeware - https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns
+  - Process Explorer (Microsoft / Sysinternals) - Freeware - https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer
+  - Process Lasso (Bitsum) - Freeware (Pro available) - https://bitsum.com/process-lasso/
+- Monitoring & Benchmarks
+  - LibreHardwareMonitor (LibreHardwareMonitor contributors) - MPL-2.0 - https://github.com/LibreHardwareMonitor/LibreHardwareMonitor
+  - HWiNFO (REALiX s.r.o.) - Freeware for personal use - https://www.hwinfo.com/
+  - CrystalDiskInfo (hiyohiyo / Crystal Dew World) - MIT - https://crystalmark.info/en/software/crystaldiskinfo/
+- GPU Settings
+  - NVIDIA Profile Inspector (Orbmu2k) - MIT - https://github.com/Orbmu2k/NvidiaProfileInspector
+  - NVCleanstall (TechPowerUp) - Freeware - https://www.techpowerup.com/download/techpowerup-nvcleanstall/
+  - NVIDIA App (NVIDIA) - Freeware (proprietary) - https://www.nvidia.com/en-us/software/nvidia-app/
+  - AMD Software: Adrenalin (AMD) - Freeware (proprietary) - https://www.amd.com/en/products/software/adrenalin.html
+  - Display Driver Uninstaller (Wagnard / Wagnardsoft) - Freeware - https://www.wagnardsoft.com/display-driver-uninstaller-ddu
+- Drivers
+  - Driver Magician (GoldSolution Software) - Trial (shareware) - https://www.drivermagician.com/
+  - NVIDIA Drivers (NVIDIA) - Freeware (proprietary) - https://www.nvidia.com/en-us/drivers/
+  - AMD Drivers (AMD) - Freeware (proprietary) - https://www.amd.com/en/support/download/drivers.html
+  - Intel Drivers (Intel) - Freeware (proprietary) - https://www.intel.com/content/www/us/en/download-center/home.html
+- Input Lag
+  - LatencyMon (Resplendence Software) - Freeware (Home Edition) - https://www.resplendence.com/latencymon
+- Cleanup
+  - Geek Uninstaller (Thomas Koen) - Freeware (Pro available) - https://geekuninstaller.com/
+  - BleachBit (BleachBit contributors) - GPL-3.0 - https://github.com/bleachbit/bleachbit
+  - WizTree (Antibody Software) - Free for personal use - https://www.diskanalyzer.com/
+- No Updates
+  - Windows Update Blocker (Sordum Team) - Freeware - https://www.sordum.org/9470/
+  - StopUpdates10 (Greatis Software) - Freeware - https://greatis.com/stopupdates10/
+- Ping
+  - DNS Jumper (Sordum Team) - Freeware - https://www.sordum.org/7952/
+  - TCP Optimizer (SpeedGuide.net) - Freeware - https://speedguide.net/downloads.php
+- Power
+  - ParkControl (Bitsum) - Freeware (Pro available) - https://bitsum.com/parkcontrol/
+- Gaming
+  - MSI Afterburner (MSI / Unwinder) - Freeware - https://www.msi.com/Landing/afterburner
+
+External links - Quality of life (not included in this repository):
+- Browsers
+  - Firefox (Mozilla) - MPL-2.0 - https://www.mozilla.org/firefox/
+  - Brave (Brave Software) - MPL-2.0 - https://brave.com/
+  - arkenfox user.js (arkenfox) - MIT - https://github.com/arkenfox/user.js
+  - Betterfox (yokoffing) - MIT - https://github.com/yokoffing/Betterfox
+- Archivers
+  - 7-Zip (Igor Pavlov) - LGPL (with BSD and unRAR parts) - https://www.7-zip.org/
+  - PeaZip (Giorgio Tani) - LGPL-3.0 - https://github.com/peazip/PeaZip
+- Media
+  - VLC media player (VideoLAN) - GPL-2.0 / LGPL-2.1 - https://www.videolan.org/vlc/
+  - mpv (mpv contributors) - GPL-2.0 / LGPL-2.1 - https://github.com/mpv-player/mpv
+- Utilities
+  - PowerToys (Microsoft) - MIT - https://github.com/microsoft/PowerToys
+  - Notepad++ (Don Ho) - GPL-2.0 - https://github.com/notepad-plus-plus/notepad-plus-plus
+  - ShareX (ShareX contributors) - GPL-3.0 - https://github.com/ShareX/ShareX
+
+Note: Windows Startup Apps is not third-party; it opens the built-in
+ms-settings:startupapps page (no external software involved).
+
+Python libraries used:
+- customtkinter (customtkinter.github.io) - BSD-style license
+- Pillow (python-pillow.org) - HPND license (required by CustomTkinter)
+- psutil (github.com/giampaolo/psutil) - BSD license
+- PyInstaller (pyinstaller.org) - GPL-2.0 license
+
+Bundled material:
+- The `recursos/` folder contains registry (.reg) and script (.bat/.cmd) files
+  plus one NVIDIA profile (.nip). The app applies these as-is; it does not
+  generate, modify, or license-bypass anything.
+
+No cracks, activators, keygens, or software license bypasses are included.
+
