@@ -60,8 +60,6 @@ A desktop application for Windows 10/11 that combines PC optimization tools into
 py -3.13 main.py
 ```
 
-The application starts in **Simulation Mode**. No changes are made to your system until you disable Simulation Mode and apply a tweak.
-
 ### Build executable
 
 ```powershell
