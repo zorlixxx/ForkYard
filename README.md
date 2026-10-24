@@ -1,105 +1,136 @@
 # ForkYard
 
-Windows Optimization Toolkit
+Windows Optimization Toolkit — v1.0.0
 
-A comprehensive tool for improving Windows system performance and stability.
+[![License: MIT (no commercial use)](https://img.shields.io/badge/license-MIT%20NC-blue.svg)](LICENSE)
+[![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/)
+[![PySide6](https://img.shields.io/badge/PySide6-6.12-blue.svg)](https://www.pyside.org/)
+[![Windows 10/11](https://img.shields.io/badge/Windows-10%20%7C%2011-blue.svg)](https://www.microsoft.com/windows)
 
-## About
+ForkYard es una aplicación de optimización para Windows 10 y 11. Combina una interfaz moderna construida con **PySide6 y QML** con un catálogo de más de 200 optimizaciones: ajustes de registro, gestión de servicios, energía, GPU, drivers, limpieza, navegadores, redes y más.
 
-ForkYard is a utility designed to optimize your Windows experience by:
-- Managing system resources efficiently
-- Cleaning temporary and unnecessary files
-- Optimizing startup processes
-- Providing system health insights
+---
 
-## Features
+## 📋 Resumen
 
-- **System Optimization**: Improve overall system performance
-- **Startup Management**: Control programs that run at startup
-- **Cleanup**: Remove temporary files and cache
-- **Health Monitoring**: Check system status and performance
+| | |
+|---|---|
+| **Qué hace** | Optimiza y desbloquea Windows mediante tweaks de registro, scripts y enlaces a herramientas externas oficiales. |
+| **Stack** | Python 3.13 + PySide6 + Qt Quick (QML) |
+| **Entrada** | `main.py` |
+| **Licencia** | MIT con cláusula de **no uso comercial** (ver `LICENSE`) |
+| **Plataforma** | Windows 10 y Windows 11 |
+| **Modo predeterminado** | Simulación (sin cambios al sistema hasta que lo desactives) |
 
-## Quick Start
+---
 
-1. Download the latest release from the [Releases](https://github.com/zorlixxx/ForkYard/releases) page
-2. Run `ForkYard.exe`
-3. Select the optimization you wish to apply
-4. Click Apply and wait for the process to complete
+## 🎯 Características principales
 
-## License
+- **Niveles de riesgo**: `Safe` (aplica directo), `Moderate` (pide confirmación), `Advanced` (advertencia y backup).
+- **Backups automáticos**: antes de tocar el registro, se crea una copia de seguridad y (cuando aplica) un punto de restauración de Windows.
+- **Catálogo externo**: todas las optimizaciones viven en `catalogo.json`, fácil de ampliar y editar.
+- **Herramientas externas**: ForkYard **no incluye ejecutables de terceros**. Solo abre la página oficial del desarrollador en tu navegador cuando eliges una herramienta externa (Firefox, 7-Zip, VLC, Process Explorer, etc.).
+- **Interfaz moderna**: tema oscuro, animaciones y panel de actividad en tiempo real.
+- **Sonidos de interfaz** y notificaciones de estado.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
 
-## Contact
+## 🚀 Inicio rápido (usuario final)
 
-**zorlixxx** — [GitHub](https://github.com/zorlixxx)
+1. Descarga el último `ForkYard.exe` desde la página de [Releases](https://github.com/zorlixxx/ForkYard/releases).
+2. Ejecútalo. Iniciará en **Modo Simulación**.
+3. Explora las categorías y selecciona las optimizaciones que quieras aplicar.
+4. Haz clic en **Aplicar**. Si el tweak requiere privilegios de administrador, se te pedirá elevación.
+5. Revisa el panel de actividad para confirmar que todo se aplicó correctamente.
 
-Feel free to contribute or report issues on the [GitHub](https://github.com/zorlixxx/ForkYard) repository.
+> **Nota:** En Modo Simulación nada se escribe en el Registro ni en el sistema. Desactívalo solo cuando estés seguro de los cambios.
 
-A desktop application for Windows 10/11 that combines PC optimization tools into a simple interface. Apply validated registry tweaks, service optimizations, and system adjustments safely.
+---
 
-## Features
+## 🛠️ Construir desde código fuente
 
-- **Categorized Optimizations**: GPU Settings, Power, Windows Services, Drivers, Input Lag, Cleanup, No Updates, Ping, RAM, Registry & BCD Tweaks, System, Gaming
-- **Smart RAM Optimization**: Automatically detects installed RAM and applies matching registry settings
-- **Simulation Mode**: Enabled by default — test changes without modifying the system registry
-- **Safety First**: Risk levels (Safe / Moderate / Advanced), confirmations for risky tweaks, automatic backups before changes
-- **Modern UI**: Dark theme with sidebar navigation, built with CustomTkinter
+### Requisitos
+- Python 3.13 o superior
+- PySide6 (`pip install PySide6`)
 
-## Requirements
-
-- Windows 10 or 11
-- Python 3.13
-- Dependencies: `customtkinter`, `pillow`, `psutil`, `pyinstaller`
-
-## Usage
-
-### Run from source
-
+### Ejecutar desde el código
 ```powershell
 py -3.13 main.py
 ```
 
-The application starts in **Simulation Mode**. No changes are made to your system until you disable Simulation Mode and apply a tweak.
-
-### Build executable
-
+### Generar ejecutable (PyInstaller)
 ```powershell
-py -3.13 build.py
+py -3.13 -m PyInstaller ForkYard.spec
 ```
+El resultado queda en la carpeta `dist/` (modo carpeta, sin consola, sin UPX).
 
-Produces a folder-mode executable in `dist/` using PyInstaller with `--onedir` and `--collect-all customtkinter`.
+---
 
-## Safety Warnings
+## ⚠️ Advertencias de seguridad
 
-- Some tweaks modify the Windows Registry. Always keep a system restore point before applying "Advanced" tweaks.
-- Simulation Mode is ON by default. Leave it ON until you are certain about the changes.
-- The app requires administrator privileges to import `.reg` files.
-- SmartScreen may show a warning when running the built executable — this is normal for unsigned applications.
+- Algunos tweaks escriben en el **Registro de Windows**. Crea un punto de restauración antes de aplicar tweaks de nivel `Advanced`.
+- **Modo Simulación está activado por defecto**. Déjalo encendido hasta que estés seguro de lo que vas a aplicar.
+- La aplicación requiere **privilegios de administrador** para importar archivos `.reg`.
+- **SmartScreen** puede mostrar una advertencia al ejecutar el `.exe` compilado: es normal en aplicaciones sin firma digital como es la mia :(.
 
-## Project Structure
+---
 
-- `main.py` — Application entry point
-- `ui.py` — User interface (sidebar, content, tweak cards, log)
-- `actions.py` — Tweak execution, external tools, backup/restore
-- `catalog.py` — Catalog data model (loads `catalogo.json`)
-- `utils.py` — Path helpers, hashing, admin check, logging
-- `catalogo.json` — All tweak metadata (names, descriptions, paths, risk levels)
-- `recursos/` — Copies of `.reg`, `.bat`, `.exe`, `.nip`, and image files from `programas/`
-- `programas/` — Original source material (read-only, not modified)
-- `backups/` — Timestamped backups created before applying tweaks
+## 🧩 Catálogo de optimizaciones
 
-## Third-Party Tools (links only, not redistributed)
+Todas las optimizaciones viven en `catalogo.json`. Cada entrada incluye:
 
-- Windows Update Blocker: https://www.sordum.org/9470/
-- DNS Jumper: https://www.sordum.org/7952/
-- Driver Magician: https://www.drivermagician.com/
-- Geek Uninstaller: https://geekuninstaller.com/
+- **nombre y descripción** de lo que hace
+- **nivel de riesgo**: `Safe`, `Moderate` o `Advanced`
+- **categoría**: System, Gaming, Power, Services, GPU Settings, Drivers, Input Lag, Cleanup, Ping, RAM, Debloat & Privacy, Monitoring & Benchmarks, Startup & Processes, Browsers, Archivers, Media, Utilities
+- **tipo**: `reg`, `bat`, `cmd`, `nip` (local) o enlace externo (`is_external: true`)
+- **instrucciones** paso a paso
+- **requiere administrador**: si aplica cambios en `HKEY_LOCAL_MACHINE` o usa comandos del sistema
+- **reversión**: cómo deshacer el cambio (cuando existe un procedimiento real)
 
-## License
+Puedes editar `catalogo.json` para añadir, quitar o modificar optimizaciones sin tocar el código Python.
 
-MIT License. See `LICENSE` file.
+---
 
-## Credits
+## 🔗 Herramientas de terceros (solo enlaces)
 
-See `CREDITS` file for third-party software licenses and attributions.
+ForkYard **no redistribuye** ejecutables de terceros. Cuando seleccionas una herramienta externa, la aplicación solo abre su página oficial en tu navegador.
+
+Ejemplos incluidos: 7-Zip, VLC, Firefox, Brave, PowerToys, BleachBit, Process Explorer, Process Lasso, O&O ShutUp10, Win11Debloat, Chris Titus WinUtil, y muchos más.
+
+Cada enlace externo fue verificado contra su fuente oficial (fecha de verificación: 2026-10-19). Consulta `CREDITS` para la lista completa y las evidencias de verificación.
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la **Licencia MIT** con una cláusula adicional de **no uso comercial**:
+
+- Puedes usar, modificar y distribuir el software libremente con fines **no comerciales**.
+- Está **prohibido vender, licenciar o redistribuir** el Software (en código fuente o binario) con fines comerciales sin permiso escrito del titular de los derechos de autor.
+
+Lee el archivo [`LICENSE`](LICENSE) para los términos completos.
+
+---
+
+## 👤 Autor
+
+**zorlix** — [GitHub](https://github.com/zorlixxx) — [Sitio personal](https://ysn.lol/zorlix) — [Ko-fi](https://ko-fi.com/zorlix)
+
+---
+
+## 🐛 Soporte
+
+- **Issues**: [https://github.com/zorlixxx/ForkYard/issues](https://github.com/zorlixxx/ForkYard/issues)
+- **Discusiones**: [https://github.com/zorlixxx/ForkYard/discussions](https://github.com/zorlixxx/ForkYard/discussions)
+
+Reporta errores, pide funcionalidades o comparte tu experiencia con los tweaks aplicados.
+
+---
+
+## 📅 Versiones
+
+- **v1.0.0** — Lanzamiento inicial con catálogo de optimizaciones, interfaz PySide6/QML, backups automáticos y enlaces a herramientas externas verificadas.
+
+---
+
+> ForkYard es una herramienta de optimización para Windows. Úsala con responsabilidad y siempre crea un punto de restauración antes de aplicar cambios de nivel avanzado en el registro del sistema.
