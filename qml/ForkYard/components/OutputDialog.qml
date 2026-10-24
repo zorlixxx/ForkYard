@@ -134,7 +134,8 @@ Popup {
                     text: control.running ? "Process is running…"
                                           : (control.exitCode === 0 ? "Completed successfully."
                                                                       : (control.exitCode > 0 ? "Completed with errors (exit " + control.exitCode + ")."
-                                                                                              : "Did not complete."))
+                                                                                              : (control.exitCode === -1 ? "Launched (elevated process)."
+                            : "Did not complete.")))
                     color: Theme.color.textFaint
                     font.family: Theme.font.family.ui
                     font.pixelSize: Theme.font.size.label

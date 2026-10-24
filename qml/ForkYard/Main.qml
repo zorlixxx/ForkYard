@@ -292,6 +292,14 @@ Window {
         id: outputDialog
         Connections {
             target: controller
+            function onCompleted(tweakId, ok, exitCode) {
+                if (tweakId === root.pendingActionId) {
+                    root.pendingActionId = ""
+                    outputDialog.exitCode = exitCode
+                    if (!controller.busy)
+                        outputDialog.running = false
+                }
+            }
             function onBusyChanged() {
                 if (!controller.busy)
                     outputDialog.running = false

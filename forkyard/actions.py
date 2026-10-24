@@ -73,7 +73,7 @@ class Actions:
                 self._emit(f"(could not start elevated process: {exc})")
                 return 1
             self._emit("(launched elevated - check the visible console window)")
-            return -1
+            return 0
 
         lines: List[str] = []
         try:

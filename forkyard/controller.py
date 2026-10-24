@@ -54,7 +54,7 @@ class _ActionWorker(QObject):
     """Runs catalog actions off the UI thread."""
 
     logged = Signal(str)
-    completed = Signal(str, bool)
+    completed = Signal(str, bool, int)
     outputLine = Signal(str)
 
     def __init__(self, catalog: Catalog) -> None:
@@ -66,18 +66,19 @@ class _ActionWorker(QObject):
         tweak = self._catalog.tweak(tweak_id)
         if tweak is None:
             self.logged.emit(f"Unknown entry: {tweak_id}")
-            self.completed.emit(tweak_id, False)
+            self.completed.emit(tweak_id, False, -1)
             return
 
         actions = Actions(log_callback=self.logged.emit,
                           output_callback=self.outputLine.emit)
         try:
-            actions.handle_tweak(tweak)
+            exit_code = actions.handle_tweak(tweak)
             ok = True
         except Exception as exc:  # pragma: no cover - defensive
             self.logged.emit(f"Error while running '{tweak.get('name', tweak_id)}': {exc}")
             ok = False
-        self.completed.emit(tweak_id, ok)
+            exit_code = -1
+        self.completed.emit(tweak_id, ok, exit_code)
 
 
 class Controller(QObject):
@@ -389,7 +390,7 @@ class Controller(QObject):
             self._busy = value
             self.busyChanged.emit()
 
-    def _on_action_completed(self, _tweak_id: str, ok: bool) -> None:
+    def _on_action_completed(self, _tweak_id: str, ok: bool, _exit_code: int) -> None:
         self._set_busy(False)
         if not ok:
             self.playSound("error")
