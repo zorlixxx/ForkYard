@@ -43,8 +43,6 @@ ForkYard es una aplicación de optimización para Windows 10 y 11. Combina una i
 4. Haz clic en **Aplicar**. Si el tweak requiere privilegios de administrador, se te pedirá elevación.
 5. Revisa el panel de actividad para confirmar que todo se aplicó correctamente.
 
-> **Nota:** En Modo Simulación nada se escribe en el Registro ni en el sistema. Desactívalo solo cuando estés seguro de los cambios.
-
 ---
 
 ## 🛠️ Construir desde código fuente
@@ -121,7 +119,7 @@ Lee el archivo [`LICENSE`](LICENSE) para los términos completos.
 ## 🐛 Soporte
 
 - **Issues**: [https://github.com/zorlixxx/ForkYard/issues](https://github.com/zorlixxx/ForkYard/issues)
-- **Discusiones**: [https://github.com/zorlixxx/ForkYard/discussions](https://github.com/zorlixxx/ForkYard/discussions)
+- **Email**: zorlix1git@protonmail.com
 
 Reporta errores, pide funcionalidades o comparte tu experiencia con los tweaks aplicados.
 
